@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id='inventory_report_current_inventory_tree_view' model='ir.ui.view'>
+		<field name='model'>ilyn.inven.reports</field>
+        <field name='arch' type='xml'>
+            <tree>
+                <field name='current_product_id'/>
+            </tree>
+        </field>
+	</record>
+
+	<record id='inventory_report_current_inventory_form_view' model='ir.ui.view'>
+        <field name='model'>ilyn.inven.reports</field>
+        <field name='view_type'>form</field>
+        <field name='arch' type='xml'>
+            <form>
+                <group>
+                    <field name='current_product_id'/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+	<record id='inventory_report_current_inventory_action' model='ir.actions.act_window'>
+        <field name='name'>Current Inventory</field>
+        <field name='type'>ir.actions.act_window</field>
+        <field name='res_model'>ilyn.inven.reports</field>
+        <field name='view_mode'>tree,kanban,form</field>
+        <field name='view_type'>tree</field>
+        <!-- <field name='help' type='html'>
+            <p class='oe_view_nocontent_create'>Click to create a New Menu </p>
+        </field> -->
+    </record>
+
+    <menuitem name='Advanced Reports' id='menuitem_inventory_report_root' parent='stock.menu_stock_root' sequence='31'/>
+
+    <menuitem action='inventory_report_current_inventory_action' id='menuitem_inventory_report_current_inventory' parent='menuitem_inventory_report_root' sequence='1'/>
+</odoo>

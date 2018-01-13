@@ -3,7 +3,11 @@
     'version': "10.0.1.0.0",
     'author': "Haha",
     'depends': ['stock'],
-    'installable': True,
     'data': ['current_inventory.xml'],
+    'installable': True,
+    'category':'Inventory',
+    'application':True,
+    'website': 'www.metamorphosis.com.bd',
+    'summary': 'Advanced Reports',
     'description': "Very Long Description"
 }
