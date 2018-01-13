@@ -3,7 +3,7 @@
     'version': "10.0.1.0.0",
     'author': "Haha",
     'depends': ['stock'],
-    'data': ['current_inventory.xml'],
+    'data': ['current_inventory.xml', 'current_inventory_report.xml'],
     'installable': True,
     'category':'Inventory',
     'application':True,
